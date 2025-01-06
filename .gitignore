@@ -1,0 +1,68 @@
+# Python-specific files
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+*.egg
+*.egg-info/
+dist/
+build/
+*.env
+*.venv
+env/
+venv/
+ENV/
+*.ipynb_checkpoints
+.mypy_cache/
+.pytest_cache/
+.pyre/
+*.coverage
+.coverage.*
+*.pkl
+
+# Jupyter Notebook checkpoints
+.ipynb_checkpoints/
+
+# Cache files and logs
+*.log
+*.cache
+*.sqlite3
+
+# LaTeX-specific files
+*.aux
+*.bbl
+*.blg
+*.brf
+*.fls
+*.fdb_latexmk
+*.glo
+*.idx
+*.ilg
+*.ind
+*.lof
+*.log
+*.lot
+*.out
+*.toc
+*.synctex.gz
+*.dvi
+/*.pdf
+*.ps
+*.eps
+*-blx.bib
+*.nav
+*.run.xml
+*.vrb
+*.snm
+
+# Temporary files
+*.bak
+*.tmp
+*.swp
+*.backup
+
+# MacOS files
+.DS_Store
+
+.vscode/
+.idea/
