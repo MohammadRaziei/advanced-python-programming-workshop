@@ -87,6 +87,7 @@
 \usepackage{ragged2e}
 \usepackage{etoolbox}
 \usepackage{subfigure}
+\usepackage{colortbl,color,xcolor}
 
 
 \usepackage{graphicx} % Allows including images
@@ -339,6 +340,7 @@
 		\end{itemize}
 	\end{frame}
 	
+	\subsection{Popular IDEs}
 	\begin{frame}{Comparison of Popular IDEs}
 		\begin{adjustbox}{scale=.9}
 		\begin{minipage}{1.11\linewidth}
@@ -374,6 +376,9 @@
 		\end{adjustbox}
 	\end{frame}
 	
+	
+	\section{Popular Python Libraries}
+	\subsection{Scientific Computing}
 	\begin{frame}{Popular Python Libraries for Scientific Computing}
 		\textbf{Overview of Key Libraries}
 		\begin{itemize}
@@ -409,7 +414,7 @@
 	\end{itemize}
 		\end{frame}
 		
-		
+	\subsection{Data Visualization}
 	\begin{frame}{Popular Python Libraries for Data Visualization}
 		\textbf{Overview of Key Libraries}
 		\begin{itemize}
@@ -423,19 +428,120 @@
 			\begin{itemize}
 				\item Built on top of Matplotlib, focusing on statistical data visualization.
 				\item Simplifies the creation of aesthetically pleasing and informative visualizations.
-				\item Includes advanced plot types like heatmaps, pair plots, violin plots, and swarm plots.
-				\item Provides built-in themes and color palettes for better design consistency.
+				\item Includes advanced plot types like heatmaps, pair plots, violin plots, and swarm plots. \supercite{pydataExampleGallery}
 			\end{itemize}
+		\end{itemize}
+	\end{frame}
+	
+	\subsection{Machine Learning}
+	\begin{frame}{Popular ML and DL Libraries}
+		\textbf{Overview:}
+		\begin{itemize}
+			\item \textbf{Keras:} High-level API for deep learning, built on TensorFlow, easy for prototyping.
+			\item \textbf{PyTorch:} Dynamic computation graph, widely used in research and production.
+			\item \textbf{TensorFlow:} End-to-end platform for machine learning, supports distributed training.
+			\item \textbf{Scikit-Learn:} Classical ML library for regression, classification, and clustering.
+		\end{itemize}
+		
+		\textbf{Applications:}
+		\begin{itemize}
+			\item \textbf{Keras, PyTorch, TensorFlow:} Deep learning for images, NLP, and time-series.
+			\item \textbf{Scikit-Learn:} Preprocessing, classical ML, and model evaluation.
+		\end{itemize}
+	\end{frame}
+	
+	
+	
+	\begin{frame}{Web Page Parsing and Applications}
+		\textbf{What is Web Parsing?}
+		\begin{itemize}
+			\item Extracting structured information from web pages.
+			\item Used in web scraping and building web crawlers.
+		\end{itemize}
+		
+		\textbf{Applications:}
+		\begin{itemize}
+			\item Data extraction (e.g., prices, reviews, articles).
+			\item Automating data collection for analysis.
+			\item Indexing web pages for search engines.
+		\end{itemize}
+		
+		\textbf{Popular Parsers:}
+		\begin{itemize}
+			\item {html.parser}, {html5lib}, {lxml}, {parsel}, {BeautifulSoup}, {selectolax}.
+		\end{itemize}
+	\end{frame}
+	
+	
+	\begin{frame}{Comparison of Python HTML Parsers}
+		\begin{figure}
+			\centering
+			\includegraphics[width=.8\textwidth]{parser-benchmark}
+			\caption{Performance comparison of Python HTML parsers.}
+			\label{fig:parser-performance}
+		\end{figure}
+	\end{frame}
+	
+	\begin{frame}{Comparison of Python HTML Parsers}
+		\begin{table}
+			\centering
+			\begin{adjustbox}{scale=.65}
+			\begin{tabular}[]{>{\centering\arraybackslash}p{3cm} |*{5}{>{\centering\arraybackslash}p{1.9cm}}}
+				\hline
+				\rowcolor[gray]{.85}
+				Parser & Speed & Memory & Simplicity & {XPath} & {CSS} \\
+				\hline
+				\cellcolor{white} {html.parser} & \cellcolor{red!50} Low & \cellcolor{green!50} Low & \cellcolor{green!50} High & \cellcolor{red!50} No & \cellcolor{red!50} No \\
+				
+				\cellcolor{white} {html5lib} & \cellcolor{red!50} Low & \cellcolor{red!50} High & \cellcolor{green!50} High & \cellcolor{red!50} No & \cellcolor{red!50} No \\
+				
+				\cellcolor{pink!40} {lxml} & \cellcolor{green!50} High & \cellcolor{yellow!50} Medium & \cellcolor{yellow!50} Medium & \cellcolor{green!50} Yes & \cellcolor{green!50} Yes \\
+				
+				\cellcolor{white} {parsel} & \cellcolor{yellow!50} Medium & \cellcolor{yellow!50} Medium & \cellcolor{green!50} High & \cellcolor{green!50} Yes & \cellcolor{green!50} Yes \\
+				
+				\cellcolor{white} {BeautifulSoup} & \cellcolor{white} Variable & \cellcolor{white} Variable & \cellcolor{green!50} High & \cellcolor{red!50} No & \cellcolor{red!50} No \\
+				
+				\cellcolor{pink!40} {selectolax} & \cellcolor{green!50} High & \cellcolor{green!50} Low & \cellcolor{yellow!50} Medium & \cellcolor{red!50} No & \cellcolor{green!50} Yes \\
+				\hline
+			\end{tabular}
+			\end{adjustbox}
+			\caption{Comparison of Python HTML Parsers}
+			\label{tab:parser-benchmarks}
+		\end{table}
+	\end{frame}
+	
+	
+	\begin{frame}{Introduction to \texttt{librosa}}
+		\textbf{What is \texttt{librosa}?}
+		\begin{itemize}
+			\item \texttt{librosa} is a Python library for audio and music analysis.
+			\item Provides tools for loading, analyzing, and transforming audio data.
+			\item Widely used in audio processing and machine learning applications.
+		\end{itemize}
+		
+		\textbf{Key Features:}
+		\begin{itemize}
+			\item Audio loading and saving in multiple formats.
+			\item Feature extraction, such as MFCCs, chroma, and spectral features.
+			\item Time-domain and frequency-domain transformations (e.g., STFT, CQT).
+			\item Utilities for beat tracking, tempo estimation, and pitch detection.
+		\end{itemize}
+		
+		\textbf{Applications:}
+		\begin{itemize}
+			\item Speech emotion recognition and audio classification.
+			\item Music recommendation systems and beat tracking.
+			\item Data augmentation and preprocessing in deep learning models.
 		\end{itemize}
 	\end{frame}
 	
 		
 		
+
 		
 		
 		
-		
-		
+		\section{Python Annotations}
 		
 		
 	
@@ -465,6 +571,8 @@ def greet(name: str, age: int) -> str:
 %	\end{minipage}
 %\end{adjustbox}
 \end{frame}
+	
+	
 	
 	
 	\begin{frame}{Using \texttt{typing} for Class Annotations}
@@ -597,6 +705,305 @@ print(func("5"))  # TypeError: type of argument "value" must be int; got str ins
 		\lstinputlisting[language=Python, caption=Using \texttt{property} with Getter and Setter]{codes/examples/property-getter-setter.py}
 	\end{frame}
 	
+	
+	\begin{frame}{\texttt{type} and \texttt{isinstance} in Python}
+		\textbf{What are \texttt{type} and \texttt{isinstance}?}
+		\begin{itemize}
+			\item \texttt{type}: Returns the type of an object.
+			\item \texttt{isinstance}: Checks if an object is an instance of a specific class or a subclass.
+		\end{itemize}
+		
+				
+		\textbf{Key Points:}
+		\begin{itemize}
+			\item \texttt{type(obj1) == type(obj2)} checks if two objects have the exact same type.
+			\item \texttt{isinstance} considers inheritance, making it more flexible for class hierarchies.
+			\item \texttt{type} is strict and only checks the direct class of an object.
+		\end{itemize}
+
+
+	\end{frame}
+	
+	\begin{frame}[fragile]{Example: Using \texttt{type}, \texttt{isinstance}}
+			\lstinputlisting[language=Python, caption=Type Checking in Python]{codes/examples/type-isinstanceof.py}
+	\end{frame}
+	
+	
+	
+	\begin{frame}
+		\begin{minipage}{.5\linewidth}
+				\begin{figure}
+				\centering
+				\includegraphics[width=0.4\linewidth]{assets/type-loop}
+				\caption{}
+				\label{fig:type-loop}
+			\end{figure}
+		\end{minipage}
+		\begin{minipage}{.5\linewidth}
+			\begin{figure}
+				\centering
+				\includegraphics[width=0.7\linewidth]{assets/isinstanceof-loop}
+				\caption{}
+				\label{fig:isinstanceof-loop}
+			\end{figure}
+		\end{minipage}
+	\end{frame}
+	
+
+	\begin{frame}[fragile]{Metaclasses in Python}
+		\textbf{What is a Metaclass?}
+		\begin{itemize}
+			\item A metaclass is a class of a class that defines how classes behave.
+			\item It controls the creation and behavior of classes, similar to how classes control instances.
+			\item By default, Python classes are instances of the \texttt{type} metaclass.
+		\end{itemize}
+	
+		\textbf{Example: Custom Metaclass}
+		\begin{lstlisting}[language=Python, caption=Defining and Using a Metaclass]
+# Define a custom metaclass
+class MyMeta(type):
+	def __new__(cls, name, bases, dct):
+		print(f"Creating class: {name}")
+		dct['greet'] = lambda self: f"Hello from {name}!"
+		return super().__new__(cls, name, bases, dct)
+
+# Use the custom metaclass
+class MyClass(metaclass=MyMeta):
+	pass
+
+# Create an instance and use the dynamically added method
+obj = MyClass()
+print(obj.greet())  # Output: Hello from MyClass!
+		\end{lstlisting}
+	\end{frame}
+	
+	
+	
+	\begin{frame}{Singleton Design Pattern}
+		\textbf{What is the Singleton Pattern?}
+		\begin{itemize}
+			\item Ensures that a class has only one instance throughout the application.
+			\item Provides a single, global access point to that instance.
+			\item Often used for managing shared resources like logging, configuration settings, or database connections.
+		\end{itemize}
+		
+		\textbf{Key Features:}
+		\begin{itemize}
+			\item Controls object creation to guarantee a single instance.
+			\item Improves resource management by avoiding duplicate instances.
+			\item Simplifies access to shared resources across the application.
+		\end{itemize}
+		
+		\textbf{When to Use It:}
+		\begin{itemize}
+			\item When exactly one object is required to coordinate actions across the system.
+			\item For shared objects that are expensive to create or manage.
+			\item To provide global access to a single point of control.
+		\end{itemize}
+	\end{frame}
+	
+	
+	\begin{frame}[fragile]{Singleton Pattern Using Metaclass}
+		\textbf{Example: Singleton Implementation with Metaclass}
+		\lstinputlisting[language=Python, caption=Singleton Using Metaclass]{codes/examples/singleton.py}
+	\end{frame}
+	
+	
+	\begin{frame}{Logging in Python}
+		\textbf{What is Logging?}
+		\begin{itemize}
+			\item Logging records events, errors, and informational messages during the execution of a program.
+			\item Essential for debugging, monitoring, and maintaining production systems.
+		\end{itemize}
+		
+		\textbf{Singleton Architecture in Logging:}
+		\begin{itemize}
+			\item Python's \texttt{logging} library uses the Singleton pattern.
+			\item Ensures a single \texttt{Logger} instance is shared across the application for consistent behavior.
+		\end{itemize}
+		
+		\textbf{Logging Levels:}
+		\begin{itemize}
+			\item \texttt{DEBUG}: Detailed information, typically for diagnosing problems.
+			\item \texttt{INFO}: General information about program execution.
+			\item \texttt{WARNING}: Indication of potential issues or unexpected situations.
+			\item \texttt{ERROR}: Logs errors that occur during execution but allow the program to continue.
+			\item \texttt{CRITICAL}: Severe errors causing the program to abort or require immediate attention.
+		\end{itemize}
+	\end{frame}
+		
+	\begin{frame}{Logging in Python}
+		\textbf{Usage in Python:}
+		\begin{itemize}
+			\item \texttt{logger = logging.getLogger(\_\_name\_\_)}:
+			\begin{itemize}
+				\item Creates or retrieves a logger for the current module.
+				\item Used in each module to log events consistently.
+			\end{itemize}
+			\item In class-based designs:
+			\begin{itemize}
+				\item Each class can have its specific logger using \texttt{getLogger()}.
+			\end{itemize}
+		\end{itemize}
+		
+		\textbf{Key Benefits:}
+		\begin{itemize}
+			\item Centralized and consistent logging across the application.
+			\item Thread-safe and configurable for multiple outputs (e.g., console, files).
+		\end{itemize}
+	\end{frame}
+	
+	
+	\begin{frame}[fragile]{Example: Using Python Logging}
+		\textbf{Python Logging Example with Levels}
+		\begin{lstlisting}[language=Python, caption=Basic Logging Example]
+import logging
+
+# Configure logging
+logging.basicConfig(
+	level=logging.DEBUG,
+	format='%(asctime)s-%(name)s-%(levelname)s-%(message)s'
+)
+
+# Create a logger
+logger = logging.getLogger(__name__)
+
+# Logging messages with different levels
+logger.debug("This is a DEBUG message.")
+logger.info("This is an INFO message.")
+logger.warning("This is a WARNING message.")
+logger.error("This is an ERROR message.")
+logger.critical("This is a CRITICAL message.")
+		\end{lstlisting}
+	\end{frame}
+	
+	
+	
+	\begin{frame}{List Comprehensions in Python}
+		\textbf{What are List Comprehensions?}
+		\begin{itemize}
+			\item A concise way to create lists in Python.
+			\item Combines the functionality of loops and \texttt{if} statements in a single line.
+			\item Improves readability and reduces boilerplate code.
+		\end{itemize}
+		
+		\textbf{Syntax:}
+		\begin{itemize}
+			\item \texttt{[expression for item in iterable if condition]}
+		\end{itemize}
+	
+	\end{frame}
+	\begin{frame}[fragile]{List Comprehensions in Python}
+		\textbf{Examples:}
+		\begin{lstlisting}[language=Python, caption=Examples of List Comprehensions]
+# Generate a list of squares
+squares = [x**2 for x in range(10)]  
+# Output: [0, 1, 4, 9, 16, 25, 36, 49, 64, 81]
+
+# Filter even numbers
+evens = [x for x in range(10) if x % 2 == 0]
+# Output: [0, 2, 4, 6, 8]
+
+# Nested comprehension (flatten a 2D list)
+matrix = [[1, 2], [3, 4]]
+flattened = [num for row in matrix for num in row]
+# Output: [1, 2, 3, 4]
+
+# Conditional expressions
+labels = ['Even' if x % 2 == 0 else 'Odd' for x in range(5)]
+# Output: ['Even', 'Odd', 'Even', 'Odd', 'Even']
+		\end{lstlisting}
+		
+		\textbf{Key Benefits:}
+		\begin{itemize}
+			\item Makes code more compact and expressive.
+			\item Often faster than equivalent for-loops due to optimization.
+			\item Versatile for data transformations and filtering.
+		\end{itemize}
+	\end{frame}
+	
+	
+	
+	\begin{frame}{Generators in Python}
+		\textbf{What are Generators?}
+		\begin{itemize}
+			\item Generators are a concise way to create iterators in Python.
+			\item Similar to list comprehensions but use parentheses instead of square brackets.
+			\item They generate items lazily, producing one item at a time, which is memory-efficient.
+		\end{itemize}
+		
+		\textbf{Syntax:}
+		\begin{itemize}
+			\item \texttt{(expression for item in iterable if condition)}
+		\end{itemize}
+		
+	\end{frame}
+	\begin{frame}[fragile]{Examples of Generators in Python}
+		\begin{lstlisting}[language=Python, caption=Examples of Generators]
+# Generator for squares
+squares_gen = (x**2 for x in range(10))
+print(next(squares_gen))  # Output: 0
+print(next(squares_gen))  # Output: 1
+
+# Filter even numbers
+evens_gen = (x for x in range(10) if x % 2 == 0)
+print(list(evens_gen))  # Output: [0, 2, 4, 6, 8]
+
+# Infinite sequence (using generator function)
+def infinite_numbers():
+	num = 0
+	while True:
+		yield num
+		num += 1
+
+gen = infinite_numbers()
+print(next(gen))  # Output: 0
+print(next(gen))  # Output: 1
+		\end{lstlisting}
+
+	\end{frame}
+	
+	
+	\begin{frame}{\texttt{Dataset} Class in PyTorch}
+		\textbf{What is \texttt{Dataset}?}
+		\begin{itemize}
+			\item \texttt{torch.utils.data.Dataset} is an abstract class in PyTorch used to represent a dataset.
+			\item It provides a standard way to load and preprocess data for training machine learning models.
+			\item Custom datasets can be created by subclassing \texttt{Dataset}.
+		\end{itemize}
+		
+		\textbf{Key Methods:}
+		\begin{itemize}
+			\item \texttt{\_\_len\_\_()}: Returns the size of the dataset.
+			\item \texttt{\_\_getitem\_\_()}: Retrieves a single data sample and its label by index.
+		\end{itemize}
+		
+	\end{frame}
+	\begin{frame}[fragile]{\texttt{Dataset} Class in PyTorch}
+		\textbf{Custom Dataset Example:}
+		\begin{lstlisting}[language=Python, caption=Defining a Custom Dataset]
+			from torch.utils.data import Dataset
+			
+class CustomDataset(Dataset):
+	def __init__(self, data, labels):
+		self.data = data
+		self.labels = labels
+			
+	def __len__(self):
+		return len(self.data)
+			
+	def __getitem__(self, idx):
+		return self.data[idx], self.labels[idx]
+			
+	# Example usage
+	data = [[1, 2], [3, 4], [5, 6]]
+	labels = [0, 1, 0]
+	dataset = CustomDataset(data, labels)
+	print(len(dataset))  # Output: 3
+	print(dataset[0])    # Output: ([1, 2], 0)
+		\end{lstlisting}
+
+	\end{frame}
 	
 	
 	

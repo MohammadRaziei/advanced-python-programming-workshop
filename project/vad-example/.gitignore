@@ -1,0 +1,71 @@
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# C extensions
+*.so
+
+# Distribution / packaging
+.Python
+env/
+venv/
+ENV/
+env.bak/
+venv.bak/
+*.egg-info/
+dist/
+build/
+*.egg
+.eggs/
+
+# Jupyter Notebook
+.ipynb_checkpoints
+
+# Pytest
+.cache/
+*.pytest_cache/
+
+# MyPy
+.mypy_cache/
+
+# Pyre
+.pyre/
+
+# Pip
+pip-log.txt
+pip-delete-this-directory.txt
+
+# pyenv
+.python-version
+
+# celery beat schedule file
+celerybeat-schedule
+
+# coverage tool
+htmlcov/
+.coverage
+.coverage.*
+
+# virtualenv
+*.swp
+*.swo
+
+# Mac files
+.DS_Store
+
+# VSCode specific
+.vscode/
+*.code-workspace
+
+# PyCharm specific
+.idea/
+
+# Logs and debug
+*.log
+*.out
+*.err
+
+# Unit test / coverage reports
+test-results/
+noxfile/
